@@ -5,7 +5,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.studentinfo_2415053122117.databinding.ActivityMainBinding
 import com.example.studentinfo_2415053122117.model.Student
+import com.example.studentinfo_2415053122117.utils.toAcademicRank
 import com.example.studentinfo_2415053122117.utils.toPassStatus
+import com.example.studentinfo_2415053122117.utils.toUpperCaseName
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,18 +28,21 @@ class MainActivity : AppCompatActivity() {
 
         with(binding) {
             tvMssv.text = "Mã sinh viên: ${myProfile.mssv}"
-            tvName.text = "Họ và tên: ${myProfile.fullName}"
             tvClass.text = "Lớp: ${myProfile.className}"
             tvAge.text = "Tuổi: ${myProfile.age}"
             tvScore.text = "Điểm tổng kết: ${myProfile.score}"
 
-            tvStatus.text = myProfile.score.toPassStatus()
+            tvName.text = "Họ và tên: ${myProfile.fullName.toUpperCaseName()}"
 
+            val status = myProfile.score.toPassStatus()
+            tvStatus.text = "Trạng thái: $status"
             if (myProfile.score >= 5.0) {
                 tvStatus.setTextColor(Color.parseColor("#388E3C")) // Xanh lá
             } else {
                 tvStatus.setTextColor(Color.parseColor("#D32F2F")) // Đỏ
             }
+
+            tvRank.text = "Xếp loại: ${myProfile.score.toAcademicRank()}"
         }
     }
 }
