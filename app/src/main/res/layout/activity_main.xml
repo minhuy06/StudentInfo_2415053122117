@@ -37,14 +37,21 @@
                 android:layout_marginBottom="16dp"
                 android:background="#B0BEC5" />
 
+            <!-- Thông tin cơ bản -->
             <TextView android:id="@+id/tvMssv" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:textColor="#333333"/>
+
+            <!-- Yêu cầu 3: Hiển thị tên viết hoa -->
             <TextView android:id="@+id/tvName" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:textColor="#333333"/>
+
             <TextView android:id="@+id/tvClass" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:textColor="#333333"/>
             <TextView android:id="@+id/tvAge" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:textColor="#333333"/>
-            <TextView android:id="@+id/tvScore" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="12dp" android:textColor="#333333"/>
+            <TextView android:id="@+id/tvScore" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="16dp" android:textColor="#333333"/>
 
-            <!-- TextView cho Yêu cầu mở rộng 1 -->
-            <TextView android:id="@+id/tvStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="18sp" android:textStyle="bold" android:textColor="#388E3C" android:textAlignment="center"/>
+            <!-- Yêu cầu 1: Trạng thái Đạt/Chưa đạt -->
+            <TextView android:id="@+id/tvStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+
+            <!-- Yêu cầu 5: Mức xếp loại -->
+            <TextView android:id="@+id/tvRank" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:textStyle="bold" android:textColor="#F57C00"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
